@@ -1,0 +1,5 @@
+requests==2.27.1
+pytest==7.0.1
+Faker==13.3.1
+pytest-env==0.6.2
+pytest-testdox==2.0.1
