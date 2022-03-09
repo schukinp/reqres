@@ -18,8 +18,8 @@ class TestApi(BaseTestModel):
 
         response = self.post(url=self.base_url + "api/users", json_data=user_data)
 
-        assert response.status_code == 201
-        assert response.json()["name"] == user_data["name"]
+        assert response.status_code == 201, "Status code is wrong"
+        assert response.json()["name"] == user_data["name"], "User name is wrong"
 
     @pytest.mark.parametrize("user_id", "2")
     def test_get_user(self, user_id):
